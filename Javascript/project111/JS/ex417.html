@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 4.17</title>
+</head>
+<body>
+    
+    <script>
+
+       //  1. prompt() : มาเก็บค่าที่ได้จาก User กรอกเข้ามา
+       let value = +prompt("ต้องการให้วนลูป กีรอบนะคะ", "2");  // Prompt()
+       
+       // 2. สร้าง function มารอ
+       function draw(n) {
+
+            for (let i=1; i <= n; i++) {    // จากภาพ  มีการ loop ทั้งหมด ? ครั้ง :ตามจำนวนที่ User กลอกเข้ามา (  i <= n  )
+
+                let k = n - i ; //  ประกาศ ตัวแปร k ขึ้นมารับ ค่า จำนวนครั้งที่ ต้องการพิมพ์     "- "
+                let l = n - k;  //  ประกาศ ตัวแปร ส ขึ้นมารับ ค่า จำนวนครั้งที่ ต้องการพิมพ์     "* "
+
+                document.write("- ".repeat(k) + "* ".repeat(l), "<br>");
+
+            }
+       }
+
+
+       draw(value);     // $$$$$  3. เรียกใช้ function;  แล้วนำค่า double มาจากบรรทัดที่ 13 มาใช้
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 4.15</title>
+</head>
+<body>
+    
+    <script>
+
+        //  1. prompt() : มาเก็บค่าที่ได้จาก User กรอกเข้ามา
+        let value = +prompt("ต้องการให้วนลูป กีรอบนะค่ะ", "2");  // Prompt()
+       
+        // 2. สร้าง function มารอ
+        function draw(n) {
+
+            for (i=1; i <= (n * 2) - 1; i++) {
+                
+                let k = i <= n ? i : (n * 2) - i;
+                let l = n - k;
+                
+                document.write("*".repeat(k) + "?".repeat(l));
+                document.write("<br>");
+            }
+
+        }
+
+        
+        draw(value);
+
+    </script>
+</body>
+</html>

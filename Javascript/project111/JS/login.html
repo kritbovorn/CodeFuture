@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+</head>
+<body>
+
+    <script>
+        // Esc
+        function pressEscapeKeyboard(event) {
+            event.keycode === 27;
+        }
+        // Login
+        let user = prompt("Who are you?", "Your Username");
+        console.log(user);
+
+        if (user === "Admin") {
+            let password = prompt("กรุณากรอก Password ของท่านด้วยนะค่ะ", "Your Password");
+            if (password === "codecamp#5") {
+                alert(`ยินดีต้อนรับนะค่ะ คุณ ${user}`);
+            }else if (password === "" || password === null) {   // password === null ; คือกดปุ่ม Cancel
+                alert("คุณไม่ได้กรอก Password นะค่ะ");
+            }else{
+                alert(`!!!!!! Password Mistake,  So sorry sir: ${user}`);
+            }
+        }else if (user === "" || pressEscapeKeyboard) { // เรียกใช้ Function pressEscapeKeyboard() เมื่อกดปุ่ม ESC
+            alert("ยกเลิก การ Login แล้ว");
+        }else{
+            alert("ผม ไม่รู้จักคุณ");
+        }
+        document.addEventListener('keydown', pressEscapeKeyboard);  //  ต้องมีบรรทัดนี้  เพื่อเช็ค event
+    </script>
+    
+</body>
+</html>

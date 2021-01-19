@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let id = prompt("คุณคือใคร ???");
+        switch (id) {
+            case null, "":
+                alert("ยกเลิก");
+                break;
+                case "admin":
+                    let pw = prompt("รหัสผ่านคืออะไร ???")
+                    switch (pw) {
+                        case null, "": 
+                            alert("ยกเลิกแล้ว");
+                            break;
+                        case "codecamp#5": 
+                            alert("ยินดีต้อนรับ");
+                            break;
+                        default:
+                            alert("รหัสผ่านผิดนะครับ");
+                            break;
+                    }
+                break;
+            break;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 4.4</title>
+</head>
+<body>
+    
+
+    <script>
+
+        let value = +prompt("ต้องการวนลูป กีรอบนะค่ะ", "2");
+        value += 1;
+
+        // สร้าง function loopValue(n);
+        function loopValue(n) {
+            for (i=1; i<n; i++) {
+                // 1. ใช้ คำสั่ง [  document.write()  ] เพื่อพิมพ์ค่าออกมาแสดงที่ เอกสาร หน้าเวป
+                document.write(`${i}`.repeat(n - 1));   // 2. เรียกใช้ function repeat() เพือสั่งให้ ทำซ้ำ ตามจำนวนรอบที่ ต้องการ : repeat()
+                document.write("<br>");     // สั้งให้ขึ้นบรรทัดใหม่
+            }
+        }
+
+        loopValue(value);   // $$$$$ เรียกใช้ function;  แล้วนำค่ะ value มาจากบรรทัดที่ 14 มาใช้
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 4.7</title>
+</head>
+<body>
+    
+    <script>
+
+    let value = +prompt("ต้องการให้วนลูป กีรอบนะค่ะ", "2");  // Prompt()
+    
+    let double = value * value;     // ยกกำลัง 2 ของค่าตัวแปรที่ได้รับมาจาก User
+
+    function draw(n) {
+
+        for (let i=n; i>=1; i--) {
+            // พิมพ์ ค่าทั้งหมด ของ ตัวแปร s : ซึ่งก็คือ ค่าของ ตัวแปร double ; จากมากไปหาน้อย
+            document.write(i + " ");
+
+            // เช็คว่า ค่าตัวแปร i ที่ลูบออกมา แต่ละตัว : หาเศษ ได้เท่ากับ 1 ; ให้พิมพ์  <br> เพื่อขึ้นบรรทัดใหม่
+            if (i % value === 1) {
+                document.write("<br>"); //  ขึ้นบรรทัดใหม่
+            }
+        }
+    }
+
+    draw(double);   // $$$$$ เรียกใช้ function;  แล้วนำค่ะ double มาจากบรรทัดที่ 14 มาใช้
+
+    </script>
+</body>
+</html>

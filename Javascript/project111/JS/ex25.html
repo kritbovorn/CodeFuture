@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex2.5</title>
+</head>
+<body>
+    
+    <script>
+
+        let player1;
+        let player2;
+
+        // Guess by Player 2
+        function guessByPlayer2() {
+            while(true) {
+                player2 = prompt("ผู้เล่นที่ 2: รบกวนทายตัวเลขที่ ผู้เล่นที่ 1 ได้เลือกไว้ด้วยนะค่ะ : ตัวเลขระหว่างเลขที่ 1 - 100 เท่านั้นนะค่ะ");
+
+                if (player2 === null) { // User คลิก Cancel || Esc
+                    alert("ผู้เล่นที่ 2: เกมส์ได้ยุติลงแล้วค่ะ")
+
+                    break;  //  หยุด loop while
+                }
+                else if (player2.length <= 0 || isNaN(player2)) {
+                    alert("Oops !!! คุณกรอกข้อมูลไม่ถูกนะ ค่ะ: ควรกรอกตัวเลข ระหว่าง 1 - 100 เท่านั้น");
+                }else if (player2 < 0 || player2 > 100) {
+                    alert("Oops !!! ต้องกรอกตัวเลข ระหว่าง 1 - 100 เท่านั้น นะค่ะ");
+                }else if (player2 < player1) {
+                    alert("Less than sir;");
+                }else if (player2 > player1) {
+                    alert("Greater than sir;")
+                
+                }else{
+                    alert("Yipppppppppy ผู้เล่นที่ 2 ทายถูก Sirrrrrrrrr.:  Game Over~~~~~~");
+
+                    break;  //  หยุด loop while
+                }
+            }
+        }
+
+        //  Player 1
+        function guessGame() {
+            while(true) {
+                player1 = prompt("กรุณากรอกตัวเลข ระหว่าง 1 - 100 เท่านั้น"); // Prompt()
+
+                if (player1 === null) { // User คลิก Cancel || Esc
+                    alert("ออกจากระบบแล้ว นะค่ะ");
+                    
+                    break;  //  หยุด loop while
+                }
+                // 1. ตัวอักษรน้อยกว่า 0 ? =0 ตัว, 2. เช็คว่าไม่ใช่ Number หรือเปล่า; ถ้าไม่ใช่ Number ให้ทำภายใน if()
+                else if (player1.length <= 0 || isNaN(player1)) {
+                    alert("Oops !!! คุณกรอกข้อมูลไม่ถูกนะ ค่ะ: ควรกรอกตัวเลข ระหว่าง 1 - 100 เท่านั้น");
+                }
+                else if (player1 < 0 || player1 > 100) {
+                    alert("Oops !!! ต้องกรอกตัวเลข ระหว่าง 1 - 100 เท่านั้น นะค่ะ");
+                }else{
+                    alert("Yeh: ระบบ ได้บันทึกตัวเลขที่คุณเลือกเก็บไว้แล้วนะค่ะ");
+
+                    guessByPlayer2()    // ***** เรียก Function guessByPlayer2() : บรรทัดที่ 16
+
+                    break;  //  หยุด loop while
+                }
+            }
+        }
+
+        guessGame(); // Start Game
+
+
+
+        
+
+
+
+        
+        
+        
+        
+        // let player2 = prompt("ให้เดาตัวเลข ของ PLayer1 ว่าเป็นเลขอะไร ระหว่าง 1 - 100");
+    </script>
+</body>
+</html>

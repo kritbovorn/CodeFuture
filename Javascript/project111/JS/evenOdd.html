@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even & Odd</title>
+</head>
+
+<body>
+
+    <script>
+
+        document.write(evenOdd(121), "<br>");
+        document.write(evenOdd(12), "<br>");
+        document.write(evenOdd(111), "<br>");
+
+        function evenOdd(num) {
+            return (num % 2 === 0) ? "เลขคู่" : "เลขคี่";
+        }
+
+        let evenOdd1 = (num) => (num % 2 === 0 ? "เลขคู่ จ้าาาา" : "เลขคี่ จ้าาาา");
+
+        document.write(evenOdd1(121));
+
+        let ask = (question, yes, no) => {
+            if (confirm(question)) {
+                yes();
+            }else{
+                no();
+            }
+        }
+
+        let y = () => alert("You agreed.");
+        let c = () => alert("You canceled the execution.");
+
+        ask("คุณต้องการไหม", y, c);
+
+
+
+    </script>
+
+</body>
+
+</html>

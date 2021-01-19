@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let id = prompt("คุณคือใคร ????");
+        if (!id) {
+            alert("ยกเลิก");
+        }else if (id !== "admin") {
+            alert("ฉันไม่รู้จักคุณ");
+        }else{
+            let pw = prompt("รหัสผ่านคืออะไร ค่ะ");
+            if (!pw) {
+                alert("ยกเลิก" + (!pw));
+            }else if (pw !== "codecamp#5") {
+                alert("รหัสผ่านผิด");
+            }else{
+                alert("ยินดีต้อนรับ");
+            }
+        }
+
+    </script>
+</body>
+</html>

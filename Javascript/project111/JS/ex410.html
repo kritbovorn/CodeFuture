@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 4.10</title>
+</head>
+<body>
+    
+    <script>
+
+    //  1. prompt() : มาเก็บค่าที่ได้จาก User กรอกเข้ามา
+    let value = +prompt("ต้องการให้วนลูป กีรอบนะค่ะ", "2");  // Prompt()
+
+    // 2. สร้าง function มารอ
+    function draw(n) {
+        for (i=1; i<=n; i++) {  // loop 1
+            
+            for (j=1; j<=n; j++) {  // loop 2
+
+                document.write((j * i) + " ");  // ***** logic
+            } 
+            document.write("<br>"); //  ขึ้นบรรทัดใหม่
+        }
+    }
+
+    draw(value);    // $$$$$  3. เรียกใช้ function;  แล้วนำค่ะ double มาจากบรรทัดที่ 13 มาใช้
+
+
+    </script>
+</body>
+</html>

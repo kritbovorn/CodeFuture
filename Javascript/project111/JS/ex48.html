@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 4.8</title>
+</head>
+<body>
+    
+    <script>
+    
+    //  1. prompt() : มาเก็บค่าที่ได้จาก User กรอกเข้ามา
+    let value = +prompt("ต้องการให้วนลูป กีรอบนะค่ะ", "2");  // Prompt()
+
+    // 2. สร้าง function มารอ
+    function draw(n) {
+        for (let i=0; i<n; i++) {
+            document.write((i * 2), "<br>");    // **** logic  :   หมายเหตุ  สังเกตุว่า เราสามารถใส่ Tag "<br>" ต่อท้ายได้เลย โดยมี ' , '  คั้น: เพื่อขึ้นบรรทัดใหม่
+            
+        }
+    }
+
+    draw(value);    // $$$$$  3. เรียกใช้ function;  แล้วนำค่ะ double มาจากบรรทัดที่ 12 มาใช้
+
+    </script>
+</body>
+</html>

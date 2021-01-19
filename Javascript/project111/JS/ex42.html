@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 4.2</title>
+</head>
+<body>
+    <p id="print"></p>
+
+    <script>
+
+        let value = +prompt("ต้องการวนลูป กี่รอบนะค่ะ", "2");    // Prompt
+        value += 1;     //  เพิ่มค่า value ไปอีก 1 
+
+        // *** สร้าง function draw(n);
+        function draw(n) {
+            for (let i=1; i<n; i++) {
+                for (let j=1; j<n; j++) {
+                    document.querySelector("#print").innerText += "*";  //  แทนค่า "*" ไว้ใน Tag <p>
+                }
+                document.querySelector("#print").innerHTML += "<br>";   //  เพิ่ม Tag <br> เพื่อให้ขึ้นบรรทัดใหม่ก่อน จะ loop อีกรอบ
+            }
+        }
+
+        draw(value);    //  $$$$$ เรียกใช้ Function draw(); แล้วรับค่า value จากบรรทัดที่ 14 มาใช้
+        
+    </script>
+</body>
+</html>

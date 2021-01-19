@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 4.0</title>
+
+</head>
+<body>
+
+    <p id="print"></p>  
+    
+    <script>
+        let value;  // ประกาศตัวแปร value ให้เป็นค่าว่างๆๆ
+
+        // *** สร้าง funtion draw(n);
+        function draw(n) {
+            
+            for(let i=1; i<n; i++) {
+                document.querySelector("#print").innerText += "*";
+            }
+        }
+
+        // ***  สร้าง function เพื่อเช็คค่าที่ได้รับ จาก User
+        function fillValue() {
+            
+            while(true) {
+                value = +prompt("กรุณากรอกจำนวนตัวเลขที่ต้องการให้วนลูป", "1 - 100");
+                value += 1      // เพื่มค่าให้กับ value ที่ได้รับมาตอนที่ user กรอก ไปอีก 1
+
+                if (value === null) {   // User คลิก Cancel || Esc
+                    alert("ออกจากระบบแล้ว นะค่ะ");
+                    
+                    return;  //  หยุด loop while
+                }
+                // 1. ตัวอักษรน้อยกว่า 0 ? =0 ตัว; 2. เช็คว่าไม่ใช่ Number หรือเปล่า; ถ้าไม่ใช่ Number ให้ทำภายใน if()
+                else if (value.lenth <= 0 || isNaN(value)) {
+                    alert("Oops !!! คุณกรอกข้อมูลไม่ถูกนะ ค่ะ: ควรกรอกตัวเลข ระหว่าง 1 - 100 เท่านั้น");
+                }else if (value < 0 || value > 100) {
+                    alert("Oops !!! ต้องกรอกตัวเลข ระหว่าง 1 - 100 เท่านั้น นะค่ะ");
+                }else{
+                    alert("Yeh: ระบบ ได้บันทึกตัวเลขที่คุณเลือกเก็บไว้แล้วนะค่ะ");
+
+                    draw(value);    // ***** : เรียกใช้ func draw(n); และ นำค่า value ที่ได้รับมา จากบรรทัดที่ 29
+
+                    return; //  หยุด loop while
+                }
+            }
+        }
+
+        fillValue();        //  $$$$$ เรียกใช้ Function
+
+    </script>
+</body>
+</html>

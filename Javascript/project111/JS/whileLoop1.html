@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhileLoop 1</title>
+</head>
+<body>
+
+    <p id="p1"></p>
+    
+    <script>
+        let passcode = "";
+        let i = 0;
+
+        while(passcode !== "Codecamp") {
+            passcode = prompt("Enter Passcode");
+            i++
+
+            console.log(`Number of try = ${i} times.`)
+        }
+        document.querySelector("#p1").innerText = "Ok you can access our content";
+    </script>
+</body>
+</html>
